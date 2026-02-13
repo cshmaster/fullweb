@@ -12,7 +12,7 @@
         body { background-color: white; margin: 0; padding: 0; overflow-x: hidden; }
         
         .bg-gradient-yellow {
-            background: linear-gradient(135deg, #FBCB2B 0%, #F59E0B 100%);
+            background: linear-gradient(135deg, #FFC20C 0%, #F59E0B 100%);
         }
         
         .bg-gradient-dark {
@@ -21,8 +21,8 @@
 
         /* 永久顯示的金色邊框樣式 */
         .gold-border-card {
-            border: 2px solid #FBCB2B !important;
-            box-shadow: 0 10px 30px rgba(251, 203, 43, 0.1) !important;
+            border: 2px solid #FFC20C !important;
+            box-shadow: 0 10px 30px rgba(255, 194, 12, 0.1) !important;
         }
 
         /* 按鈕樣式 */
@@ -43,8 +43,9 @@
         .btn-line { background-color: #06C755; color: white; }
         .btn-line:hover { background-color: #05a346; transform: translateY(-3px); }
         
-        .btn-tel { background-color: #1c1917; color: #FBCB2B; border: 2px solid #FBCB2B; }
-        .btn-tel:hover { background-color: #FBCB2B; color: black; transform: translateY(-3px); }
+        /* 電話預約固定為 #FFC20C */
+        .btn-tel { background-color: #FFC20C; color: black; border: 2px solid #FFC20C; }
+        .btn-tel:hover { background-color: #eab308; transform: translateY(-3px); }
         
         .btn-map { background-color: #f5f5f5; color: #333; border: 1px solid #ddd; }
         .btn-map:hover { background-color: #e5e5e5; transform: translateY(-3px); }
@@ -60,23 +61,25 @@
 <body class="text-stone-900">
 
     <!-- 首屏區塊 -->
-    <header class="relative flex items-center bg-stone-900 py-12 md:py-24 px-6 md:px-16 overflow-hidden">
+    <header class="relative flex items-center bg-[#000000] py-12 md:py-24 px-6 md:px-16 overflow-hidden">
         <div class="absolute inset-0">
-            <div class="absolute top-0 right-0 w-2/3 h-full bg-[#FBCB2B] opacity-20 -skew-x-12 translate-x-1/3"></div>
+            <!-- 右方裝飾區塊顏色 #FFC20C -->
+            <div class="absolute top-0 right-0 w-2/3 h-full bg-[#FFC20C] -skew-x-12 translate-x-1/3"></div>
         </div>
         <div class="relative z-10 container mx-auto">
             <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
                 <div class="w-full lg:w-1/2 text-left">
                     <h1 class="font-bold mb-8 text-white leading-tight">
                         <span class="mobile-title-size text-5xl md:text-7xl block mb-2">由外而內的</span>
-                        <span class="mobile-subtitle-size text-5xl md:text-7xl text-[#FBCB2B] font-serif italic block">身體深呼吸</span>
+                        <span class="mobile-subtitle-size text-5xl md:text-7xl text-[#FFC20C] font-serif italic block">身體深呼吸</span>
                     </h1>
                 </div>
                 <div class="w-full lg:w-1/2">
-                    <div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-10 rounded-2xl shadow-2xl">
-                        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-[#FBCB2B] font-serif border-l-4 border-[#FBCB2B] pl-4">匠心傳承：陳師傅</h2>
-                        <p class="text-stone-300 leading-loose text-lg md:text-2xl">
-                            承襲正統手法，不追求暴力的聲響，而是透過<span class="text-white font-bold">專業推拿</span>讓<span class="text-white font-bold underline decoration-[#FBCB2B] underline-offset-4">肌肉與結構回歸平衡</span>。
+                    <!-- 背景不透明度 50% (bg-black/50) -->
+                    <div class="bg-black/50 backdrop-blur-md border border-white/20 p-6 md:p-10 rounded-2xl shadow-2xl">
+                        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-[#FFC20C] font-serif border-l-4 border-[#FFC20C] pl-4">匠心傳承：陳師傅</h2>
+                        <p class="text-white leading-loose text-lg md:text-2xl">
+                            承襲正統手法，不追求暴力的聲響，而是透過<span class="text-white font-bold">專業推拿</span>讓<span class="text-[#FFC20C] font-bold underline decoration-[#FFC20C] underline-offset-4">肌肉與結構回歸平衡</span>
                         </p>
                     </div>
                 </div>
@@ -93,25 +96,25 @@
 
         <div class="grid gap-6 md:gap-8 max-w-5xl mx-auto">
             <!-- 項目 1 -->
-            <div class="group p-6 md:p-10 bg-white border-l-8 border-[#FBCB2B] rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
+            <div class="group p-6 md:p-10 bg-white border-l-8 border-[#FFC20C] rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
                 <div class="flex-1">
                     <h3 class="text-2xl md:text-3xl font-bold text-stone-900 mb-3">客製化深層推拿</h3>
                     <p class="text-stone-500 text-base md:text-lg leading-relaxed max-w-lg">針對您的身體緊繃點進行客製化調理，釋放深層肌肉壓力，恢復身體彈性。</p>
                 </div>
                 <div class="flex flex-col gap-3 w-full md:w-auto">
-                    <span class="px-6 py-3 bg-gradient-to-r from-[#FBCB2B] to-[#F59E0B] text-black rounded-xl font-black shadow-md text-center md:min-w-[200px]">60min / NT$1,200</span>
-                    <span class="px-6 py-3 bg-gradient-to-r from-[#FBCB2B] to-[#F59E0B] text-black rounded-xl font-black shadow-md text-center md:min-w-[200px]">90min / NT$1,700</span>
+                    <span class="px-6 py-3 bg-gradient-to-r from-[#FFC20C] to-[#F59E0B] text-black rounded-xl font-black shadow-md text-center md:min-w-[200px]">60min / NT$1,200</span>
+                    <span class="px-6 py-3 bg-gradient-to-r from-[#FFC20C] to-[#F59E0B] text-black rounded-xl font-black shadow-md text-center md:min-w-[200px]">90min / NT$1,700</span>
                 </div>
             </div>
 
             <!-- 項目 2 -->
-            <div class="group p-6 md:p-10 bg-white border-l-8 border-[#FBCB2B] rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
+            <div class="group p-6 md:p-10 bg-white border-l-8 border-[#FFC20C] rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
                 <div class="flex-1">
                     <h3 class="text-2xl md:text-3xl font-bold text-stone-900 mb-3">假胯寬調理</h3>
                     <p class="text-stone-500 text-base md:text-lg leading-relaxed max-w-lg">改善長期姿勢不良造成的骨盆位移，優化下半身線條，讓儀態更完美。</p>
                 </div>
                 <div class="flex flex-col gap-3 w-full md:w-auto">
-                    <span class="px-6 py-3 bg-gradient-to-r from-[#FBCB2B] to-[#F59E0B] text-black rounded-xl font-black shadow-md text-center md:min-w-[200px]">30min / NT$800</span>
+                    <span class="px-6 py-3 bg-gradient-to-r from-[#FFC20C] to-[#F59E0B] text-black rounded-xl font-black shadow-md text-center md:min-w-[200px]">30min / NT$800</span>
                 </div>
             </div>
 
@@ -121,31 +124,26 @@
                 <div class="relative z-10 flex-1">
                     <div class="flex items-center gap-3 mb-2">
                         <h3 class="text-2xl md:text-3xl font-bold">預約非營業時間</h3>
-                        <span class="bg-[#FBCB2B] text-black text-[10px] px-2 py-1 rounded font-black uppercase tracking-widest">Premium</span>
+                        <span class="bg-[#FFC20C] text-black text-[10px] px-2 py-1 rounded font-black uppercase tracking-widest">Premium</span>
                     </div>
-                    <p class="text-stone-400 text-lg md:text-xl leading-relaxed">為忙碌的您提供彈性時段，請於當日 <span class="text-white font-bold underline decoration-[#FBCB2B]">20:00 前</span> 預約確認。</p>
+                    <p class="text-stone-400 text-lg md:text-xl leading-relaxed">為忙碌的您提供彈性時段，請於當日 <span class="text-white font-bold underline decoration-[#FFC20C]">20:00 前</span> 預約確認。</p>
                 </div>
                 <div class="relative z-10 w-full md:w-auto flex justify-center">
-                    <span class="px-6 py-3 bg-gradient-to-r from-[#FBCB2B] to-[#F59E0B] text-black rounded-xl font-black shadow-md text-center md:min-w-[200px]">60min / NT$1,800</span>
+                    <span class="px-6 py-3 bg-gradient-to-r from-[#FFC20C] to-[#F59E0B] text-black rounded-xl font-black shadow-md text-center md:min-w-[200px]">60min / NT$1,800</span>
                 </div>
             </div>
 
-            <!-- 立即預約區塊 (已更新為金色實線邊框) -->
+            <!-- 立即預約區塊 -->
             <div class="gold-border-card max-w-xl mx-auto w-full px-6 py-10 bg-stone-50 rounded-[2rem] text-center">
                 <h3 class="text-2xl font-bold mb-8 text-stone-800 font-serif">陳師傅傳統推拿：立即預約</h3>
                 
                 <div class="flex flex-col gap-4">
-                    <!-- LINE 按鈕 -->
                     <a href="https://line.me/ti/p/V5dgVcRHAr" target="_blank" class="btn-booking btn-line">
                         <span class="mr-2 text-2xl">💬</span> 加入 LINE 好友
                     </a>
-
-                    <!-- 電話按鈕 -->
                     <a href="tel:0909601727" class="btn-booking btn-tel">
                         <span class="mr-2 text-2xl">📞</span> 立即電話預約
                     </a>
-
-                    <!-- 地圖按鈕 -->
                     <a href="https://www.google.com/maps/place/%E9%99%B3%E5%B8%AB%E5%82%85%E5%82%B3%E7%B5%B1%E6%8E%A8%E6%82%BF-%E5%85%A8%E9%A0%90%E7%B4%84%E5%88%B6%28%E5%8F%B0%E5%8C%97%E4%BF%A1%E7%BE%A9%E5%8D%80%29/data=!4m2!3m1!1s0x0:0xb7d38e1cf24585fe?sa=X" target="_blank" class="btn-booking btn-map">
                         <span class="mr-2 text-2xl">📍</span> 查看工作室位置
                     </a>
@@ -158,13 +156,11 @@
     <!-- 工作室資訊區塊 -->
     <section class="pt-2 pb-12 bg-white section-padding md:px-16">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 mb-8">
-            <!-- 工作室位置 -->
             <div class="gold-border-card px-6 py-4 md:px-8 md:py-6 bg-white rounded-[2rem] md:rounded-[2.5rem] flex flex-col items-center text-center transition-all">
                 <div class="h-10 md:h-12 flex flex-col items-center justify-center mb-4">
                     <h3 class="text-xl md:text-2xl font-black text-stone-900 tracking-widest uppercase">工作室位置</h3>
                 </div>
-                <div class="w-16 h-1 bg-[#FBCB2B] mb-4 md:mb-6"></div>
-                
+                <div class="w-16 h-1 bg-[#FFC20C] mb-4 md:mb-6"></div>
                 <div class="flex flex-col space-y-2 md:space-y-3">
                     <p class="text-stone-900 text-xl md:text-2xl font-bold">台北市信義區永吉路30巷117號2樓</p>
                     <p class="text-stone-600 font-medium text-base md:text-lg">距市府捷運站步行約 5 分鐘</p>
@@ -172,14 +168,12 @@
                 </div>
             </div>
 
-            <!-- 營業時間 -->
             <div class="gold-border-card px-6 py-4 md:px-8 md:py-6 bg-white rounded-[2rem] md:rounded-[2.5rem] flex flex-col items-center text-center transition-all">
                 <div class="h-10 md:h-12 flex flex-col items-center justify-center mb-4">
                     <h3 class="text-xl md:text-2xl font-black text-stone-900 tracking-widest uppercase leading-none">營業時間</h3>
                     <span class="text-[#059669] font-bold text-base md:text-lg leading-none mt-1">（完全預約制）</span>
                 </div>
-                <div class="w-16 h-1 bg-[#FBCB2B] mb-4 md:mb-6"></div>
-                
+                <div class="w-16 h-1 bg-[#FFC20C] mb-4 md:mb-6"></div>
                 <div class="flex flex-col space-y-2 md:space-y-3">
                     <p class="text-stone-900 text-xl md:text-2xl font-bold">週一至週六 11:00 - 22:00</p>
                     <p class="text-stone-900 text-xl md:text-2xl font-bold">週日 12:00 - 18:00</p>
@@ -188,41 +182,39 @@
             </div>
         </div>
 
-        <!-- 服務承諾 -->
         <div class="max-w-5xl mx-auto">
             <div class="mb-8 bg-gradient-dark p-1 rounded-[2rem] shadow-2xl">
                 <div class="bg-black border border-white/10 p-6 md:p-10 rounded-[1.8rem] text-center">
                     <p class="text-white text-xl md:text-3xl font-serif leading-relaxed px-2">
-                        推拿過程如有任何不適或手法不滿意<br class="hidden md:block" />
-                        <span class="text-[#FBCB2B] font-bold">請立刻告知將不收取費用</span>
+                        推拿過程如有任何不適或不滿意<br class="hidden md:block" />
+                        <span class="text-[#FFC20C] font-bold">請立刻告知將不收取費用</span>
                     </p>
                 </div>
             </div>
             
-            <!-- 預約注意事項 -->
             <div class="gold-border-card bg-stone-50 p-8 md:p-14 rounded-[2rem] md:rounded-[2.5rem] mb-0">
                 <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 md:mb-10 border-b border-stone-200 pb-8 gap-4">
                     <h3 class="text-stone-900 font-black text-2xl md:text-3xl font-serif">預約注意事項 <span class="text-red-600 block md:inline text-lg md:text-xl mt-2 md:mt-0 font-sans">(無法接受請勿預約)</span></h3>
                 </div>
                 <ul class="grid grid-cols-1 gap-y-6 md:gap-y-8 text-stone-700 text-lg md:text-xl">
                     <li class="flex gap-4 md:gap-6 items-center group">
-                        <span class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl bg-[#FBCB2B] text-black font-black shrink-0 shadow-md">01</span>
+                        <span class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl bg-[#FFC20C] text-black font-black shrink-0 shadow-md">01</span>
                         <span class="font-bold">非整骨、非整脊、沒有轉脖子</span>
                     </li>
                     <li class="flex gap-4 md:gap-6 items-center group">
-                        <span class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl bg-[#FBCB2B] text-black font-black shrink-0 shadow-md">02</span>
+                        <span class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl bg-[#FFC20C] text-black font-black shrink-0 shadow-md">02</span>
                         <span class="font-bold">遲到時間計入服務時間</span>
                     </li>
                     <li class="flex gap-4 md:gap-6 items-center group">
-                        <span class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl bg-[#FBCB2B] text-black font-black shrink-0 shadow-md">03</span>
+                        <span class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl bg-[#FFC20C] text-black font-black shrink-0 shadow-md">03</span>
                         <span class="font-bold">無加重力道服務</span>
                     </li>
                     <li class="flex gap-4 md:gap-6 items-center group">
-                        <span class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl bg-[#FBCB2B] text-black font-black shrink-0 shadow-md">04</span>
+                        <span class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl bg-[#FFC20C] text-black font-black shrink-0 shadow-md">04</span>
                         <span class="font-bold">為維護雙方權益工作室設有錄影系統</span>
                     </li>
                     <li class="flex gap-4 md:gap-6 items-center group">
-                        <span class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl bg-[#FBCB2B] text-black font-black shrink-0 shadow-md">05</span>
+                        <span class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl md:rounded-2xl bg-[#FFC20C] text-black font-black shrink-0 shadow-md">05</span>
                         <span class="font-bold">視當天預約狀況推拿時間可能會有約 5 分鐘誤差</span>
                     </li>
                 </ul>
@@ -231,29 +223,46 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-stone-500 py-8 px-6 text-center relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FBCB2B] to-transparent opacity-30"></div>
-        <div class="max-w-2xl mx-auto flex flex-col items-center">
-            <div class="flex flex-col items-center">
-                <div class="border border-red-900/40 px-4 py-2 rounded-lg bg-red-950/20 w-fit mx-auto">
-                    <p class="text-red-700 font-bold text-xs md:text-base tracking-[0.1em]">傳統整復推拿不得宣稱療效</p>
+    <footer class="bg-black text-stone-500 py-4 md:py-8 px-6 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FFC20C] to-transparent opacity-30"></div>
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <!-- 左側空位(平衡視覺) -->
+            <div class="hidden md:block w-32"></div>
+
+            <!-- 中間核心資訊 -->
+            <div class="flex flex-col items-center space-y-2">
+                <div class="flex flex-col items-center">
+                    <div class="border border-red-900/40 px-3 py-1 rounded-lg bg-red-950/20 w-fit mx-auto">
+                        <p class="text-red-700 font-bold text-xs md:text-sm tracking-[0.1em]">傳統整復推拿不得宣稱療效</p>
+                    </div>
+                    <div class="mt-2">
+                        <p class="text-[#FFC20C] font-bold text-lg md:text-xl font-serif tracking-[0.15em] leading-tight">陳師傅傳統整復推拿</p>
+                    </div>
                 </div>
-                <div class="mt-4">
-                    <p class="text-[#FBCB2B] font-bold text-xl md:text-2xl font-serif tracking-[0.15em]">陳師傅傳統整復推拿</p>
+                <div class="space-y-1">
+                    <div class="flex justify-center gap-3 text-stone-300 opacity-60 text-[10px] md:text-xs uppercase tracking-tighter font-medium">
+                        <span>Professional</span>
+                        <span>•</span>
+                        <span>Traditional</span>
+                        <span>•</span>
+                        <span>SINCE 2018</span>
+                    </div>
+                    <p class="text-[10px] md:text-xs text-stone-300 opacity-40 uppercase tracking-tighter font-medium">© 2024 Master Chen Therapy. All Rights Reserved.</p>
                 </div>
             </div>
-            <div class="space-y-1">
-                <div class="flex justify-center gap-3 text-stone-300 opacity-60 text-[10px] md:text-xs uppercase tracking-tighter mt-4 font-medium">
-                    <span>Professional</span>
-                    <span>•</span>
-                    <span>Traditional</span>
-                    <span>•</span>
-                    <span>SINCE 2018</span>
-                </div>
-                <p class="text-[9px] md:text-[10px] text-stone-300 opacity-40 uppercase tracking-[0.4em] pt-4 font-medium">© 2024 Master Chen Therapy. All Rights Reserved.</p>
+
+            <!-- 右下角計數器 -->
+            <div class="flex items-center gap-2 bg-stone-900/50 px-3 py-1.5 rounded-full border border-white/5">
+                <span class="text-[10px] md:text-xs text-stone-400 uppercase tracking-widest font-bold">Visits:</span>
+                <span id="busuanzi_value_site_pv" class="text-[#FFC20C] font-black text-sm md:text-base tabular-nums">
+                    <span class="animate-pulse">...</span>
+                </span>
             </div>
         </div>
     </footer>
+
+    <!-- 計數器腳本 (支援 GitHub Pages 等靜態網站，基於指紋識別) -->
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 </body>
 </html>
