@@ -9,7 +9,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;700&display=swap');
         .font-serif { font-family: 'Noto Serif TC', serif; }
         html { scroll-behavior: smooth; }
-        body { background-color: white; margin: 0; padding: 0; overflow-x: hidden; }
+        /* 網站背景改為米白色 */
+        body { background-color: #FDFBF7; margin: 0; padding: 0; overflow-x: hidden; }
         
         .bg-gradient-yellow {
             background: linear-gradient(135deg, #FFC20C 0%, #F59E0B 100%);
@@ -17,11 +18,6 @@
         
         .bg-gradient-dark {
             background: linear-gradient(135deg, #1c1917 0%, #000000 100%);
-        }
-
-        .gold-border-card {
-            border: 2px solid #FFC20C !important;
-            box-shadow: 0 10px 30px rgba(255, 194, 12, 0.1) !important;
         }
 
         .btn-booking {
@@ -82,14 +78,15 @@
     </header>
 
     <!-- 服務項目區塊 -->
-    <section class="pt-12 pb-6 bg-white section-padding md:px-16 relative">
+    <section class="pt-12 pb-6 section-padding md:px-16 relative">
         <div class="text-center mb-10 relative">
             <h2 class="text-3xl md:text-5xl font-bold font-serif mb-6 text-stone-900 uppercase tracking-[0.15em] md:tracking-[0.2em]">專業服務項目</h2>
             <div class="w-24 h-2 bg-gradient-yellow mx-auto rounded-full"></div>
         </div>
 
         <div class="grid gap-6 md:gap-8 max-w-5xl mx-auto">
-            <div class="group p-6 md:p-10 bg-white border-l-8 border-[#FFC20C] rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
+            <!-- 客製化深層推拿區塊 -->
+            <div class="group p-6 md:p-10 bg-stone-50 border-l-8 border-[#FFC20C] border-r border-t border-b border-[#FFC20C] rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-[0_5px_15px_rgba(0,0,0,0.03)] transition-all">
                 <div class="flex-1">
                     <h3 class="text-2xl md:text-3xl font-bold text-stone-900 mb-3">客製化深層推拿</h3>
                     <p class="text-stone-500 text-base md:text-lg leading-relaxed max-w-lg">針對您的身體緊繃點進行客製化調理，釋放深層肌肉壓力，恢復身體彈性。</p>
@@ -100,7 +97,8 @@
                 </div>
             </div>
 
-            <div class="group p-6 md:p-10 bg-white border-l-8 border-[#FFC20C] rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
+            <!-- 假胯寬調理區塊 -->
+            <div class="group p-6 md:p-10 bg-stone-50 border-l-8 border-[#FFC20C] border-r border-t border-b border-[#FFC20C] rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6 shadow-[0_5px_15px_rgba(0,0,0,0.03)] transition-all">
                 <div class="flex-1">
                     <h3 class="text-2xl md:text-3xl font-bold text-stone-900 mb-3">假胯寬調理</h3>
                     <p class="text-stone-500 text-base md:text-lg leading-relaxed max-w-lg">改善長期姿勢不良造成的骨盆位移，優化下半身線條，讓儀態更完美。</p>
@@ -124,7 +122,8 @@
                 </div>
             </div>
 
-            <div class="gold-border-card max-w-xl mx-auto w-full px-6 py-10 bg-stone-50 rounded-[2rem] text-center">
+            <!-- 立即預約區塊 -->
+            <div class="max-w-xl mx-auto w-full px-6 py-10 bg-stone-50 rounded-[2rem] text-center border-2 border-[#FFC20C]">
                 <h3 class="text-2xl font-bold mb-8 text-stone-800 font-serif">陳師傅傳統推拿：立即預約</h3>
                 <div class="flex flex-col gap-4">
                     <a href="https://line.me/ti/p/V5dgVcRHAr" target="_blank" class="btn-booking btn-line">
@@ -143,9 +142,10 @@
     </section>
 
     <!-- 工作室資訊區塊 -->
-    <section class="pt-2 pb-12 bg-white section-padding md:px-16">
+    <section class="pt-2 pb-12 section-padding md:px-16">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 mb-8">
-            <div class="gold-border-card px-6 py-4 md:px-8 md:py-6 bg-white rounded-[2rem] md:rounded-[2.5rem] flex flex-col items-center text-center transition-all">
+            <!-- 工作室位置 -->
+            <div class="px-6 py-4 md:px-8 md:py-6 bg-stone-50 border border-[#FFC20C] rounded-[2rem] md:rounded-[2.5rem] flex flex-col items-center text-center transition-all">
                 <div class="h-10 md:h-12 flex flex-col items-center justify-center mb-4">
                     <h3 class="text-xl md:text-2xl font-black text-stone-900 tracking-widest uppercase">工作室位置</h3>
                 </div>
@@ -157,7 +157,8 @@
                 </div>
             </div>
 
-            <div class="gold-border-card px-6 py-4 md:px-8 md:py-6 bg-white rounded-[2rem] md:rounded-[2.5rem] flex flex-col items-center text-center transition-all">
+            <!-- 營業時間 -->
+            <div class="px-6 py-4 md:px-8 md:py-6 bg-stone-50 border border-[#FFC20C] rounded-[2rem] md:rounded-[2.5rem] flex flex-col items-center text-center transition-all">
                 <div class="h-10 md:h-12 flex flex-col items-center justify-center mb-4">
                     <h3 class="text-xl md:text-2xl font-black text-stone-900 tracking-widest uppercase leading-none">營業時間</h3>
                     <span class="text-[#059669] font-bold text-base md:text-lg leading-none mt-1">（完全預約制）</span>
@@ -173,7 +174,7 @@
 
         <!-- 店休日期區塊 -->
         <div class="max-w-6xl mx-auto mb-8">
-            <div class="gold-border-card px-6 py-4 md:px-8 md:py-6 bg-white rounded-[2rem] md:rounded-[2.5rem] flex flex-col items-center text-center transition-all">
+            <div class="px-6 py-4 md:px-8 md:py-6 bg-stone-50 border border-[#FFC20C] rounded-[2rem] md:rounded-[2.5rem] flex flex-col items-center text-center transition-all">
                 <div class="h-10 md:h-12 flex flex-col items-center justify-center mb-4">
                     <h3 class="text-xl md:text-2xl font-black text-stone-900 tracking-widest uppercase leading-none">2026年店休日期</h3>
                 </div>
@@ -187,7 +188,6 @@
         <div class="max-w-5xl mx-auto">
             <!-- 滿意度宣告區塊 -->
             <div class="mb-8 bg-gradient-dark p-1 rounded-[2rem] shadow-2xl">
-                <!-- 調整 Padding (上下黑邊) 為原先的一半 -->
                 <div class="bg-black border border-white/10 p-2 md:p-3 rounded-[1.8rem] text-center">
                     <p class="text-white text-xl md:text-3xl font-serif leading-[1.8] md:leading-[2] px-2">
                         推拿過程如有任何不適或不滿意<br class="hidden md:block" />
@@ -196,8 +196,8 @@
                 </div>
             </div>
             
-            <!-- 注意事項區塊 -->
-            <div class="gold-border-card bg-stone-50 p-8 md:p-14 rounded-[2rem] md:rounded-[2.5rem] mb-0">
+            <!-- 預約注意事項區塊 (維持極淺灰底色，邊框金黃) -->
+            <div class="bg-stone-50 p-8 md:p-14 rounded-[2rem] md:rounded-[2.5rem] border border-[#FFC20C] shadow-sm mb-0">
                 <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 md:mb-10 border-b border-stone-200 pb-8 gap-4">
                     <h3 class="text-stone-900 font-black text-2xl md:text-3xl font-serif">預約注意事項 <span class="text-red-600 block md:inline text-lg md:text-xl mt-2 md:mt-0 font-sans">(無法接受請勿預約)</span></h3>
                 </div>
