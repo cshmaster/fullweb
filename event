@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陳師傅傳統整復推拿 - BIGBANG 20週年手燈加購活動</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Noto+Serif+TC:wght@400;600;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #111111;
+            --card-bg: #181818;
+            --accent-gold: #FFC20C;
+            --accent-gold-light: #FFE58F;
+            --accent-gold-dark: #B38600;
+            --text-main: #E5E5E5;
+            --text-muted: #8C8C8C;
+            --border-color: #2A2A2A;
+            --border-gold: rgba(255, 194, 12, 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Noto Serif TC', serif;
+            line-height: 1.8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top banner non-sticky layout */
+        header {
+            padding: 35px 20px 25px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            background-color: #111111;
+        }
+
+        .header-title {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 0.18em;
+            text-shadow: 0 0 20px rgba(255, 194, 12, 0.25);
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Main Event Card Styling */
+        .event-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 45px 35px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 194, 12, 0.1);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .visual-box {
+            background: linear-gradient(180deg, #0A0A0A 0%, #1F1F1F 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 45px 20px 35px;
+            margin-bottom: 30px;
+            position: relative;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .crown-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
+            color: #000000;
+            font-size: 1.25rem;
+            font-weight: 900;
+            padding: 8px 30px;
+            border-radius: 50px;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(255, 194, 12, 0.4);
+            text-align: center;
+        }
+
+        .crown-svg {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            fill: var(--accent-gold);
+            filter: drop-shadow(0 0 12px rgba(255, 194, 12, 0.5));
+            display: block;
+        }
+
+        .visual-text-main {
+            color: var(--text-main);
+            font-size: 1.3rem;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            border-top: 1px solid rgba(255, 194, 12, 0.2);
+            padding-top: 18px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .visual-text-sub {
+            color: var(--text-main);
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-top: 8px;
+            line-height: 1.5;
+            width: 100%;
+            opacity: 0.95;
+        }
+
+        .price-box {
+            margin: 25px 0 35px;
+            padding: 22px;
+            background: rgba(255, 194, 12, 0.04);
+            border-top: 1px dashed var(--border-gold);
+            border-bottom: 1px dashed var(--border-gold);
+        }
+
+        .price-label {
+            color: var(--accent-gold);
+            font-size: 2.4rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+            display: block;
+            text-shadow: 0 0 15px rgba(255, 194, 12, 0.2);
+        }
+
+        .price-amount {
+            color: var(--accent-gold);
+            font-size: 2.4rem;
+            font-weight: 900;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.02em;
+        }
+
+        .price-unit {
+            font-size: 1.3rem;
+            margin-right: 6px;
+        }
+
+        .official-link-box {
+            margin-top: 30px;
+        }
+
+        .official-link {
+            color: var(--accent-gold);
+            text-decoration: underline;
+            text-underline-offset: 8px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            transition: all 0.3s ease;
+            display: inline-block;
+            line-height: 1.8;
+        }
+
+        .official-link:hover {
+            color: var(--accent-gold-light);
+            text-shadow: 0 0 10px rgba(255, 194, 12, 0.4);
+        }
+
+        /* Footer & Disclaimer Section */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border-color);
+            background-color: #0C0C0C;
+        }
+
+        .disclaimer {
+            max-width: 620px;
+            margin: 0 auto 16px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .disclaimer p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .header-title {
+                font-size: 1.4rem;
+            }
+            .event-card {
+                padding: 30px 20px;
+            }
+            .crown-badge {
+                font-size: 1.05rem;
+                padding: 6px 22px;
+            }
+            .crown-svg {
+                width: 65px;
+                height: 65px;
+            }
+            .visual-text-main {
+                font-size: 1.1rem;
+            }
+            .visual-text-sub {
+                font-size: 0.9rem;
+            }
+            .price-label,
+            .price-amount {
+                font-size: 1.8rem;
+            }
+            .official-link {
+                font-size: 0.95rem;
+            }
+            .disclaimer {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="header-title">陳師傅傳統整復推拿</h1>
+    </header>
+
+    <div class="container">
+        <main class="event-card">
+            
+            <div class="visual-box">
+                <span class="crown-badge">限量三名</span>
+                
+                <svg class="crown-svg" viewBox="0 0 24 24">
+                    <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+                </svg>
+
+                <div class="visual-text-main">BIGBANG 20週年官方應援手燈</div>
+                <div class="visual-text-sub">
+                    BIGBANG OFFICIAL LIGHT STICK 20TH ANNIVERSARY EDITION – THE LIGHT RETURNS
+                </div>
+            </div>
+
+            <div class="price-box">
+                <span class="price-label">預約推拿加購價</span>
+                <div class="price-amount">
+                    <span class="price-unit">NT$</span>1,950
+                </div>
+            </div>
+
+            <div class="official-link-box">
+                <a href="https://cshmaster.github.io/fullweb/" target="_blank" rel="noopener noreferrer" class="official-link">
+                    預約請點我查看工作室官方網站
+                </a>
+            </div>
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="disclaimer">
+            <p>本活動手燈於新光三越官方商店購買，僅作為顧客活動加購使用</p>
+            <p>商品皆為全新但購買現場皆有拆封檢測</p>
+            <p>本工作室與官方經紀公司及相關權利單位無宣稱授權或直接合作關係</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
