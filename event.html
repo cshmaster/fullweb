@@ -40,12 +40,14 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Top banner non-sticky layout */
         header {
             padding: 35px 20px 25px;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
-            background-color: #111111;
+            background-color: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(8px);
+            position: relative; /* 移除原本固定效果 (sticky/fixed) */
+            z-index: 50;
         }
 
         .header-title {
@@ -67,7 +69,6 @@
             justify-content: center;
         }
 
-        /* Main Event Card Styling */
         .event-card {
             background: var(--card-bg);
             border: 1px solid var(--border-gold);
@@ -108,9 +109,10 @@
             text-align: center;
         }
 
+        /* 經典 BIGBANG 應援手燈五瓣黃金皇冠圖騰 */
         .crown-svg {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
             margin: 0 auto 15px;
             fill: var(--accent-gold);
             filter: drop-shadow(0 0 12px rgba(255, 194, 12, 0.5));
@@ -192,12 +194,10 @@
             text-shadow: 0 0 10px rgba(255, 194, 12, 0.4);
         }
 
-        /* Footer & Disclaimer Section */
         footer {
             text-align: center;
             padding: 30px 20px;
             color: var(--text-muted);
-            font-size: 0.8rem;
             border-top: 1px solid var(--border-color);
             background-color: #0C0C0C;
         }
@@ -206,13 +206,17 @@
             max-width: 620px;
             margin: 0 auto 16px;
             line-height: 1.8;
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--text-muted);
+            font-size: 1.05rem; /* 字體加大至與官網連結相同大小 */
+            color: var(--text-main);
         }
 
         .disclaimer p {
             margin-bottom: 10px;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: var(--text-muted);
         }
 
         @media (max-width: 600px) {
@@ -227,8 +231,8 @@
                 padding: 6px 22px;
             }
             .crown-svg {
-                width: 65px;
-                height: 65px;
+                width: 75px;
+                height: 75px;
             }
             .visual-text-main {
                 font-size: 1.1rem;
@@ -240,9 +244,7 @@
             .price-amount {
                 font-size: 1.8rem;
             }
-            .official-link {
-                font-size: 0.95rem;
-            }
+            .official-link,
             .disclaimer {
                 font-size: 0.95rem;
             }
@@ -251,6 +253,7 @@
 </head>
 <body>
 
+    <!-- 上方 Banner（非固定 header） -->
     <header>
         <h1 class="header-title">陳師傅傳統整復推拿</h1>
     </header>
@@ -261,8 +264,18 @@
             <div class="visual-box">
                 <span class="crown-badge">限量三名</span>
                 
-                <svg class="crown-svg" viewBox="0 0 24 24">
-                    <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+                <!-- 經典 BIGBANG 應援手燈五尖角皇冠造型 SVG -->
+                <svg class="crown-svg" viewBox="0 0 100 100">
+                    <!-- 皇冠底部底座與寶石點綴 -->
+                    <path d="M 15,72 L 85,72 A 3,3 0 0 1 88,75 L 88,78 A 3,3 0 0 1 85,81 L 15,81 A 3,3 0 0 1 12,78 L 12,75 A 3,3 0 0 1 15,72 Z" />
+                    <!-- 皇冠五瓣花冠主體 -->
+                    <path d="M 12,70 L 10,32 L 30,52 L 50,18 L 70,52 L 90,32 L 88,70 Z" />
+                    <!-- 皇冠五顆頂端球體/尖端點綴 -->
+                    <circle cx="10" cy="28" r="4.5" />
+                    <circle cx="30" cy="48" r="4" />
+                    <circle cx="50" cy="13" r="5" />
+                    <circle cx="70" cy="48" r="4" />
+                    <circle cx="90" cy="28" r="4.5" />
                 </svg>
 
                 <div class="visual-text-main">BIGBANG 20週年官方應援手燈</div>
@@ -289,11 +302,11 @@
 
     <footer>
         <div class="disclaimer">
-            <p>本活動手燈於新光三越官方商店購買，僅作為顧客活動加購使用</p>
+                       <p>本活動手燈於新光三越官方商店購買，僅作為顧客活動加購使用</p>
             <p>商品皆為全新但購買現場皆有拆封檢測</p>
             <p>本工作室與官方經紀公司及相關權利單位無宣稱授權或直接合作關係</p>
         </div>
-
+        <p class="copyright">© Master Chen Traditional Therapy. All Rights Reserved.</p>
     </footer>
 
 </body>
